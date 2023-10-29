@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="googlebot" content="index,follow" />
+    <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+    <title>Raab Magic League</title>
+    <meta name="description" content="Follow your favourite MTG players fighting for the RML Duel Season 6 crown!">
+    <link href="app.css" rel="stylesheet" />
+
+    <style>
+        .headlines {
+            box-shadow: rgb(0 0 0 / 10%) 0 10px 50px;
+            padding-left: 15px;
+            padding-right: 15px;
+            padding-top: 15px;
+        }
+
+        .headlines-item {
+            font-size: 14px;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            border-bottom-width: 1px;
+            border-bottom-color: #e7e7e7;
+            border-bottom-style: solid;
+            cursor: pointer;
+        }
+
+        .headlines-item p {
+            margin-bottom: 0;
+        }
+
+        .top-headline-item {
+            cursor: pointer;
+            display: flex;
+            margin-top: 20px;
+            transition: all .5s ease-in;
+            box-shadow: rgb(0 0 0 / 10%) 0 10px 50px;
+        }
+
+        .top-headlines-image-wrapper {
+            max-height: 167px;
+            min-height: 167px;
+            width: 100%;
+            height: 100%;
+        }
+
+        .top-headlines-image-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .top-headline-article-container {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            padding: 10px;
+        }
+
+        .top-headline-article-data {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            font-size: 13px;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            font-family: sans-serif;
+        }
+
+        .top-headline-article-date {
+            font-size: 11px;
+            font-style: italic;
+            color: #a0a0a0;
+        }
+
+        .top-headline-article-title {
+            font-weight: 700;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+        }
+
+        .bold {
+            font-weight: bold;
+        }
+
+        .sv-box .body {
+            padding: 0;
+        }
+
+        #event-sticky-info .nav-pills>li>a.active,
+        #event-sticky-info .nav-pills>li>a.active:focus,
+        #event-sticky-info .nav-pills>li>a.active:hover {
+            background-color: unset;
+            border-bottom: 4px solid #bf0c3e;
+            color: #bf0c3e;
+            font-weight: 700;
+        }
+
+        .breadcrumbs {
+            display: flex;
+            list-style: none;
+            padding-left: 0;
+        }
+
+        body.dark #event-sticky-info .nav-pills>li>a {
+            color: #fff;
+        }
+
+        .blog-content img,
+        #blog-content img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        @media only screen and (min-width: 1200px) {
+            .container {
+                max-width: 1350px;
+            }
+
+        }
+
+        @media only screen and (min-width: 1200px) {
+            .competition-cell-table {
+                width: 82%;
+            }
+        }
+
+        #backlinks a {
+            color: #fff;
+        }
+
+        .match-fixture__score {
+            background: #00222e; 
+            font-size: 1.4rem;
+            line-height: 2.2rem;
+            color: #eae7e4; 
+            font-family: PremierSans-Heavy, Arial, Helvetica Neue, Helvetica, sans-serif;
+            font-weight: 200;
+        }
+
+        .fixtures__date {
+            font-family: PremierSans-Heavy, Arial, Helvetica Neue, Helvetica, sans-serif;
+            font-weight: 400;
+            font-size: 1.2rem;
+            line-height: 2rem;
+            letter-spacing: -.04rem;
+            color: #fff;
+        }
+
+        .fixtures__date--long {
+            display: block;
+        }
+    </style>
+</head>
+
+<body class="dark">
+    <header class="site-header">
+
+
+               
+                    <nav class="navbar bg-dark">
+
+                        <a class="navbar-brand" href="https://raabmagicleague.com/">
+
+                            <img height="150" alt="Raab Magic League" class="img-responsive"
+                                src="images/raabMagic.png">
+                            
+
+
+                        </a>
+                    </nav>
+
+    </header>
+
+    <br>
+    <div style="margin-top:15px" class="sv-box undefined">
+
+
+        <div class="clearfix"></div>
+        <div class="body">
+            <div class="row">
+                <div class="col-md-12">
+                    <div id="schedule">
+                        <div class="top-tournament ">
+                            <div style="padding:4px 0px;display:block;cursor:pointer">
+                                <span><img alt="RML Duel Commander" width="86" height="50"
+                                        src="images/rml_logo 1.png"></span>
+                                <span class="league-name">Raab Magic League Duel</span>
+                            </div>
+
+                            <div class="fixtures__date-container">
+                                <div class="fixtures__date-content-container-">
+                                    <time class="fixtures__date fixtures__date--long"
+                                        datetime="Saturday 28 October 2023">Saturday 28 October 2023</time>
+                                    <div class"matches-list">
+                                        <ul class="competitions">
+                                            <li>
+                                                <a target="_blank" class="competition" title=""
+                                                    href="">
+                                                    <span style="min-height:35px" class="competition-cell-table">
+                                                        <span class="competition-cell-table-cell "
+                                                        style="min-height: 35px;">Group C</span>
+                                                        <span
+                                                            class="competition-cell-table-cell competition-cell-side1">
+                                                            <span class="name"> Baka
+                                                            </span>
+                                                        </span>
+                                                        <span class="team-logo competition-cell-table-cell"
+                                                            style="width: 40px;margin-left: 3px;"><img
+                                                                src="images/baka.png"
+                                                                width="30" height="30" alt="Baka"></span>
+
+                                                        <span
+                                                            class="competition-cell-table-cell competition-cell-score">
+                                                            <time style="text-transform: none;"
+                                                                datetime="2023-10-29 13:00:00"
+                                                                class="competition-cell-status match-fixture__score">2<span>-</span>0
+                                                            </time>
+                                                        </span>
+                                                        <span
+                                                            class="competition-cell-table-cell competition-cell-side2">
+                                                            <span class="team-logo"><img
+                                                                    src="images/bala.png"
+                                                                    width="30" height="30" alt="Bala"></span>
+                                                            <span class="name"> Bala</span></span>
+                                                    </span>
+                                                    <span class="competition-cell-status-name btn btn-sm btn-ss"
+                                                        style="min-height: 35px;">Watch it on YouTube</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a target="_blank" class="competition"
+                                                    title="Aston Villa vs Luton Town Watch it on YouTube" href="">
+                                                    <span style="min-height:35px" class="competition-cell-table">
+                                                        <span class="competition-cell-table-cell "
+                                                        style="min-height: 35px;">Group C</span>
+                                                        <span
+                                                            class="competition-cell-table-cell competition-cell-side1">
+                                                            <span class="name"> Baka
+                                                            </span>
+                                                        </span>
+                                                        <span class="team-logo competition-cell-table-cell"
+                                                            style="width: 40px;margin-left: 3px;"><img
+                                                                src="images/baka.png"
+                                                                width="30" height="30" alt="Baka"></span>
+
+
+                                                        <span
+                                                            class="competition-cell-table-cell competition-cell-score">
+                                                            <time style="text-transform: none;"
+                                                                datetime="2023-10-29 13:00:00"
+                                                                class="competition-cell-status match-fixture__score">2<span>-</span>0
+                                                            </time>
+                                                        </span>
+
+                                                        <span
+                                                            class="competition-cell-table-cell competition-cell-side2">
+                                                            <span class="team-logo"><img
+                                                                    src="images/gazpacho.png"
+                                                                    width="30" height="30" alt="Gazpacho"></span>
+                                                            <span class="name"> Gazpacho</span></span>
+                                                    </span>
+                                                    <span class="competition-cell-status-name btn btn-sm btn-ss"
+                                                        style="min-height: 35px;">Watch it on YouTube</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <br>
+
+                                <div class="fixtures__date-content-container-">
+                                    <time class="fixtures__date fixtures__date--long"
+                                        datetime="Friday 27 October 2023">Friday 27 October 2023</time>
+                                        <div class"matches-list">
+                                            <ul class="competitions">
+                                                <li>
+                                                    <a target="_blank" class="competition" title="Mavrik vs Gazpacho"
+                                                        href="">
+                                                        <span style="min-height:35px" class="competition-cell-table">
+                                                            <span class="competition-cell-table-cell "
+                                                            style="min-height: 35px;">Group C</span>
+                                                            <span
+                                                                class="competition-cell-table-cell competition-cell-side1">
+                                                                <span class="name"> Bitiur66
+                                                                </span>
+                                                            </span>
+                                                            <span class="team-logo competition-cell-table-cell"
+                                                                style="width: 40px;margin-left: 3px;"><img
+                                                                    src="images/bitiur66.png"
+                                                                    width="30" height="30" alt="Bitiur66"></span>
+    
+                                                            <span
+                                                                class="competition-cell-table-cell competition-cell-score">
+                                                                <time style="text-transform: none;"
+                                                                    datetime="2023-10-29 13:00:00"
+                                                                    class="competition-cell-status match-fixture__score">2<span>-</span>1
+                                                                </time>
+                                                            </span>
+                                                            <span
+                                                                class="competition-cell-table-cell competition-cell-side2">
+                                                                <span class="team-logo"><img
+                                                                        src="images/mavrik.png"
+                                                                        width="30" height="30" alt="Everton"></span>
+                                                                <span class="name"> Mavrik</span></span>
+                                                        </span>
+                                                        <span class="competition-cell-status-name btn btn-sm btn-ss"
+                                                            style="min-height: 35px;">Watch it on YouTube</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a target="_blank" class="competition"
+                                                        title="Aston Villa vs Luton Town Watch it on YouTube" href="">
+                                                        <span style="min-height:35px" class="competition-cell-table">
+                                                            <span class="competition-cell-table-cell "
+                                                            style="min-height: 35px;">Group C</span>
+                                                            <span
+                                                                class="competition-cell-table-cell competition-cell-side1">
+                                                                <span class="name"> Bitiur66
+                                                                </span>
+                                                            </span>
+                                                            <span class="team-logo competition-cell-table-cell"
+                                                                style="width: 40px;margin-left: 3px;"><img
+                                                                    src="images/bitiur66.png"
+                                                                    width="30" height="30" alt="Bitiur66"></span>
+    
+    
+                                                            <span
+                                                                class="competition-cell-table-cell competition-cell-score">
+                                                                <time style="text-transform: none;"
+                                                                    datetime="2023-10-29 13:00:00"
+                                                                    class="competition-cell-status match-fixture__score">2<span>-</span>1
+                                                                </time>
+                                                            </span>
+    
+                                                            <span
+                                                                class="competition-cell-table-cell competition-cell-side2">
+                                                                <span class="team-logo"><img
+                                                                        src="images/bala.png"
+                                                                        width="30" height="30" alt="Bala"></span>
+                                                                <span class="name"> Bala</span></span>
+                                                        </span>
+                                                        <span class="competition-cell-status-name btn btn-sm btn-ss"
+                                                            style="min-height: 35px;">Watch it on YouTube</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a target="_blank" class="competition"
+                                                        title="Aston Villa vs Luton Town Watch it on YouTube" href="">
+                                                        
+                                                        <span style="min-height:35px" class="competition-cell-table">
+                                                            <span class="competition-cell-table-cell "
+                                                            style="min-height: 35px;">Group C</span>
+                                                            <span
+                                                                class="competition-cell-table-cell competition-cell-side1">
+                                                                <span class="name"> Bitiur66
+                                                                </span>
+                                                            </span>
+                                                            <span class="team-logo competition-cell-table-cell"
+                                                                style="width: 40px;margin-left: 3px;"><img
+                                                                    src="images/bitiur66.png"
+                                                                    width="30" height="30" alt="Bitiur66"></span>
+    
+    
+                                                            <span
+                                                                class="competition-cell-table-cell competition-cell-score">
+                                                                <time style="text-transform: none;"
+                                                                    datetime="2023-10-29 13:00:00"
+                                                                    class="competition-cell-status match-fixture__score">2<span>-</span>0
+                                                                </time>
+                                                            </span>
+    
+                                                            <span
+                                                                class="competition-cell-table-cell competition-cell-side2">
+                                                                <span class="team-logo"><img
+                                                                        src="images/gazpacho.png"
+                                                                        width="30" height="30" alt="Gazpacho"></span>
+                                                                <span class="name"> Gazpacho</span></span>
+                                                        </span>
+                                                        <span class="competition-cell-status-name btn btn-sm btn-ss"
+                                                            style="min-height: 35px;">Watch it on YouTube</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a target="_blank" class="competition"
+                                                        title="Aston Villa vs Luton Town Watch it on YouTube" href="">
+                                                        
+                                                        <span style="min-height:35px" class="competition-cell-table">
+                                                            <span class="competition-cell-table-cell "
+                                                            style="min-height: 35px;">Group C</span>
+                                                            <span
+                                                                class="competition-cell-table-cell competition-cell-side1">
+                                                                <span class="name"> Mavrik
+                                                                </span>
+                                                            </span>
+                                                            <span class="team-logo competition-cell-table-cell"
+                                                                style="width: 40px;margin-left: 3px;"><img
+                                                                    src="images/mavrik.png"
+                                                                    width="30" height="30" alt="Mavrik"></span>
+    
+    
+                                                            <span
+                                                                class="competition-cell-table-cell competition-cell-score">
+                                                                <time style="text-transform: none;"
+                                                                    datetime="2023-10-29 13:00:00"
+                                                                    class="competition-cell-status match-fixture__score">2<span>-</span>0
+                                                                </time>
+                                                            </span>
+    
+                                                            <span
+                                                                class="competition-cell-table-cell competition-cell-side2">
+                                                                <span class="team-logo"><img
+                                                                        src="images/bala.png"
+                                                                        width="30" height="30" alt="Bala"></span>
+                                                                <span class="name">Bala</span></span>
+                                                        </span>
+                                                        <span class="competition-cell-status-name btn btn-sm btn-ss"
+                                                            style="min-height: 35px;">Watch it on YouTube</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a target="_blank" class="competition"
+                                                        title="Aston Villa vs Luton Town Watch it on YouTube" href="">
+                                                        
+                                                        <span style="min-height:35px" class="competition-cell-table">
+                                                            <span class="competition-cell-table-cell "
+                                                            style="min-height: 35px;">Group C</span>
+                                                            <span
+                                                                class="competition-cell-table-cell competition-cell-side1">
+                                                                <span class="name"> Mavrik
+                                                                </span>
+                                                            </span>
+                                                            <span class="team-logo competition-cell-table-cell"
+                                                                style="width: 40px;margin-left: 3px;"><img
+                                                                    src="images/mavrik.png"
+                                                                    width="30" height="30" alt="Mavrik"></span>
+    
+    
+                                                            <span
+                                                                class="competition-cell-table-cell competition-cell-score">
+                                                                <time style="text-transform: none;"
+                                                                    datetime="2023-10-29 13:00:00"
+                                                                    class="competition-cell-status match-fixture__score">2<span>-</span>1
+                                                                </time>
+                                                            </span>
+    
+                                                            <span
+                                                                class="competition-cell-table-cell competition-cell-side2">
+                                                                <span class="team-logo"><img
+                                                                        src="images/gazpacho.png"
+                                                                        width="30" height="30" alt="Gazpacho"></span>
+                                                                <span class="name"> Gazpacho</span></span>
+                                                        </span>
+                                                        <span class="competition-cell-status-name btn btn-sm btn-ss"
+                                                            style="min-height: 35px;">Watch it on YouTube</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+
+                                        </div>
+                                </div>
+                                <br>
+                                <div class="fixtures__date-container">
+                                    <div class="fixtures__date-content-container-">
+                                        <time class="fixtures__date fixtures__date--long"
+                                            datetime="Sunday 22 October 2023">Sunday 22 October 2023</time>
+                                        <div class"matches-list">
+                                            <ul class="competitions">
+                                                <li>
+                                                    <a target="_blank" class="competition" title="Mavrik vs Gazpacho"
+                                                        href="">
+                                                        <span style="min-height:35px" class="competition-cell-table">
+                                                            <span class="competition-cell-table-cell "
+                                                            style="min-height: 35px;">Group A</span>
+                                                            <span
+                                                                class="competition-cell-table-cell competition-cell-side1">
+                                                                <span class="name"> Ozymandias
+                                                                </span>
+                                                            </span>
+                                                            <span class="team-logo competition-cell-table-cell"
+                                                                style="width: 40px;margin-left: 3px;"><img
+                                                                    src="images/ozymandias.png"
+                                                                    width="30" height="30" alt="Ozymandias"></span>
+    
+                                                            <span
+                                                                class="competition-cell-table-cell competition-cell-score">
+                                                                <time style="text-transform: none;"
+                                                                    datetime="2023-10-29 13:00:00"
+                                                                    class="competition-cell-status match-fixture__score">2<span>-</span>0
+                                                                </time>
+                                                            </span>
+                                                            <span
+                                                                class="competition-cell-table-cell competition-cell-side2">
+                                                                <span class="team-logo"><img
+                                                                        src="images/mrakos.png"
+                                                                        width="30" height="30" alt="Mr.Akos"></span>
+                                                                <span class="name"> Mr.Akos</span></span>
+                                                        </span>
+                                                        <span class="competition-cell-status-name btn btn-sm btn-ss"
+                                                            style="min-height: 35px;">Watch it on YouTube</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a target="_blank" class="competition"
+                                                        title="Aston Villa vs Luton Town Watch it on YouTube" href="">
+                                                        <span style="min-height:35px" class="competition-cell-table">
+                                                            <span class="competition-cell-table-cell "
+                                                            style="min-height: 35px;">Group D</span>
+                                                            <span
+                                                                class="competition-cell-table-cell competition-cell-side1">
+                                                                <span class="name"> Velora
+                                                                </span>
+                                                            </span>
+                                                            <span class="team-logo competition-cell-table-cell"
+                                                                style="width: 40px;margin-left: 3px;"><img
+                                                                    src="images/velora.png"
+                                                                    width="30" height="30" alt="Velora"></span>
+    
+    
+                                                            <span
+                                                                class="competition-cell-table-cell competition-cell-score">
+                                                                <time style="text-transform: none;"
+                                                                    datetime="2023-10-29 13:00:00"
+                                                                    class="competition-cell-status match-fixture__score">2<span>-</span>0
+                                                                </time>
+                                                            </span>
+    
+                                                            <span
+                                                                class="competition-cell-table-cell competition-cell-side2">
+                                                                <span class="team-logo"><img
+                                                                        src="images/mrmiller.png"
+                                                                        width="30" height="30" alt="Mr.Miller"></span>
+                                                                <span class="name"> Mr.Miller</span></span>
+                                                        </span>
+                                                        <span class="competition-cell-status-name btn btn-sm btn-ss"
+                                                            style="min-height: 35px;">Watch it on YouTube</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+            </main>
+            <br>
+            <br>
+            <br>
+            <br>
+            <footer style="background: rgb(31, 31, 31);margin: 0;" class="wrapper">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <nav class="navbar navbar-expand-sm navbar-light">
+                                <div class="" id="backlinks">
+                                    <div class="justify-content-center navbar-nav" style="width:100%">
+                                        <p>
+
+
+
+                                        </p>
+
+                                    </div>
+                                </div>
+                            </nav>
+                            <hr>
+                            <div class="text-center"></div>
+                            <p style="color:var(--main-color);text-align:justify">
+                            <div class="clearfix"></div>
+                            <div>
+                                <div class="row justify-content-center">
+                                    <div class=" col-md-6 col-md-offset-3">
+                                        <p class="text-center">Raab Magic League - Copyrights © 2023. All rights
+                                            reserved.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+
+            <!-- jQuery library -->
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+            <!-- Latest compiled JavaScript -->
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+            <script>
+                $('[data-date-btn-action]').on('click', function () {
+                    var action = $(this).data('date-btn-action')
+                    $('#mini-calendar').find('.selected').removeClass('selected')
+                    $(this).parent().addClass('selected')
+                    $.ajax({
+                        url: '/loadEventsDate?date=' + action,
+                        type: 'GET',
+                        dataType: 'text',
+                        success: function (data) {
+                            console.log(data)
+                            $('#schedule').html(data)
+                        }
+                    })
+                })
+            </script>
+            <script async src="https://www.googletagmanager.com/gtag/js?id="></script>
+            <script>function gtag() {
+                    dataLayer.push(arguments)
+                }
+
+                window.dataLayer = window.dataLayer || [], gtag("js", new Date), gtag("config", "")</script>
+</body>
+
+</html>
